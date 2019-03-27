@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Fisher.Bookstore.Models;
+using Fisher.Bookstore.Data;
 
 namespace Fisher.Bookstore.Api
 {
@@ -28,7 +29,7 @@ namespace Fisher.Bookstore.Api
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<BookstoreContext>(options=> options.UseInMemoryDatabase("Books"));
+            services.AddDbContext<BookstoreContext>(options=> options.UseNpgsql(Configuration.GetConnectionString("BookstoreContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
        
         }
