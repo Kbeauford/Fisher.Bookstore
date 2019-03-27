@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Genertic;
+using System.Collections.Generic;
 
 namespace Fisher.Bookstore.Models
 {

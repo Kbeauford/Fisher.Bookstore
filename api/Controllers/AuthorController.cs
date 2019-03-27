@@ -21,7 +21,7 @@ namespace Fisher.Bookstore.Controllers
             // we would normally get this from a database
             var featuredAuthor = new Author()
                 {
-                    AuthorId = 1,
+                    Id = 1,
                     Name = "J.K. Rowling" //or pick your favorite
                     
                 };
