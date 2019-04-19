@@ -17,7 +17,7 @@ namespace Fisher.Bookstore.Api.Controllers
 
         public BooksController(BookstoreContext db) => this.db = db;
 
-        [HttpGet()]
+        /*[HttpGet()]
         public IActionResult GetBooks()
         {
             // Use ASP.NET framework for proper status codes
@@ -40,7 +40,7 @@ namespace Fisher.Bookstore.Api.Controllers
             // return the Book inside HTTP 200 OK
             return Ok(book);
         }
-
+    */
         [HttpPost]
         [Authorize]
         public IActionResult CreateBook([FromBody] Book book)
